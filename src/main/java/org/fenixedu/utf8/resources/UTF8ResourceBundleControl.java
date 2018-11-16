@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.nio.charset.StandardCharsets;
 import java.security.AccessController;
 import java.security.PrivilegedActionException;
 import java.security.PrivilegedExceptionAction;
@@ -13,6 +14,8 @@ import java.util.PropertyResourceBundle;
 import java.util.ResourceBundle;
 
 /**
+ * Load {@link PropertyResourceBundle} as {@link StandardCharsets#UTF_8} encoded files
+ * 
  * Created by Sérgio Silva (hello@fenixedu.org).
  */
 public class UTF8ResourceBundleControl extends ResourceBundle.Control {
@@ -71,7 +74,8 @@ public class UTF8ResourceBundleControl extends ResourceBundle.Control {
             }
             if (stream != null) {
                 try {
-                    bundle = new PropertyResourceBundle(new InputStreamReader(stream, "UTF-8"));
+                    // the only change to the super method is the next line
+                    bundle = new PropertyResourceBundle(new InputStreamReader(stream, StandardCharsets.UTF_8));
                 } finally {
                     stream.close();
                 }
