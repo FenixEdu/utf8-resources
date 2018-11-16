@@ -18,6 +18,11 @@
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
 
+  <issueManagement>
+    <system>JIRA</system>
+    <url>https://jira.fenixedu.org/browse/UTF8JRC</url>
+  </issueManagement>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
