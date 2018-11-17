@@ -42,7 +42,7 @@ public class UTF8ResourceBundleControlProvider implements ResourceBundleControlP
     }
 
     private boolean isUTF8BaseName(final String baseName) {
-        return RESOURCE_BASE_NAMES.stream().anyMatch(e -> e.startsWith(baseName));
+        return RESOURCE_BASE_NAMES.stream().anyMatch(baseName::startsWith);
     }
 
 }
