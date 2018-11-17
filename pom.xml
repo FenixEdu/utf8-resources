@@ -30,6 +30,13 @@
     <tag>HEAD</tag>
   </scm>
   
+  <distributionManagement>
+    <repository>
+        <id>fenixedu-releases</id>
+        <url>https://repo.fenixedu.org/fenixedu-releases</url>
+    </repository>
+  </distributionManagement>
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
