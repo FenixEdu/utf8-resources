@@ -17,13 +17,17 @@ will load all bundles that start with `resources` or `contents` as `UTF-8` encod
 ## Running Java using this extension
 
 1. Check the latest release [*HERE*](https://repo.fenixedu.org/fenixedu-maven-repository/org/fenixedu/utf8-resources/) and download the jar file.
-2. Place it some $PATH_TO_JAR_LOCATION directory
+2. Place it in some $PATH_TO_JAR_LOCATION directory
 3. Choose your poison
 
-### Java
+### Install in JRE
 
-`java -jar -Djava.ext.dirs=$JAVA_HOME/jre/lib/ext:$PATH_TO_JAR_LOCATION sample-app.jar`
+1. copy the jar file to `$JAVA_HOME/jre/lib/ext` and pray
 
 ### Maven
 
 `export MAVEN_OPTS="$MAVEN_OPTS -Djava.ext.dirs=$JAVA_HOME/jre/lib/ext:$PATH_TO_JAR_LOCATION"`
+
+### Adding extension when running java in the command line
+
+`java -jar -Djava.ext.dirs=$JAVA_HOME/jre/lib/ext:$PATH_TO_JAR_LOCATION sample-app.jar`
