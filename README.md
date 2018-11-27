@@ -17,7 +17,7 @@ will load all bundles that start with `resources` or `contents` as `UTF-8` encod
 ## Running Java using this extension
 
 1. Check the latest release [*HERE*](https://repo.fenixedu.org/fenixedu-maven-repository/org/fenixedu/utf8-resources/) and download the jar file.
-2. Place it in some $PATH_TO_JAR_LOCATION directory
+2. Place it in some $PATH_TO_JAR_LOCATION directory (note: this directory should contain only the jar file for the extension mechanism to work properly) 
 3. Choose your poison
 
 ### Install in JRE
